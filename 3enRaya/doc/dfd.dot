@@ -1,0 +1,31 @@
+digraph {
+
+    node[shape=box, style=rounded];
+
+    main -> splash;
+    main -> gestor_partida;
+
+    gestor_partida -> elegir_mv;
+    gestor_partida -> pedir_nombre;
+    gestor_partida -> donde_mover;
+    gestor_partida -> mov_valido;
+    gestor_partida -> pintar_mesa;
+    gestor_partida -> alternar;
+    gestor_partida -> no_haya_ganado;
+
+    elegir_mv -> cual_mover;
+    elegir_mv -> primera_de_casa;
+
+    mov_valido -> is_inbound;
+    mov_valido -> esta_vacia;
+
+    pintar_mesa -> pintar_casa;
+    pintar_mesa -> pintar_tablero;
+
+    pintar_tablero -> esta_en_casa;
+    pintar_casa -> esta_en_casa;
+
+    primera_de_casa -> esta_en_casa;
+
+    titulo;
+}
